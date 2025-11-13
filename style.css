@@ -36,7 +36,7 @@ button:disabled{ opacity:.6; cursor:not-allowed; }
              gap:8px;}
 
 .slot{
-  min-height:72px; border:2px dashed #3a3a3a; border-radius:10px; background:var(--slot);
+  min-height:56px; width:50px; font-size:0.85em; border:2px dashed #3a3a3a; border-radius:10px; background:var(--slot);
   display:grid; place-items:center; transition: border-color .15s ease, background .15s ease;
 }
 .slot.dragover{ border-color:var(--accent); background:#1e2740; }
