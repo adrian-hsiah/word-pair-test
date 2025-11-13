@@ -23,14 +23,14 @@ button:disabled{ opacity:.6; cursor:not-allowed; }
 #board{
   background:var(--panel); border-radius:14px; padding:16px;
   display:grid; gap:12px;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 0.7fr);
   grid-template-rows: auto auto;
 }
 .word-box{
   background:#151515; border:1px solid #272727; border-radius:12px; padding:12px;
   display:grid; gap:10px; grid-template-columns: repeat(2, 1fr);
 }
-.word-box.six{ grid-column: 1 / -1; grid-template-columns: repeat(3, 1fr); }
+.word-box.six{ grid-column: 1 / -1; grid-template-columns: repeat(3, 0.3fr); }
 
 .slot{
   min-height:72px; border:2px dashed #3a3a3a; border-radius:10px; background:var(--slot);
