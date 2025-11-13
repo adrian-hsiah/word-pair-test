@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Word Pair</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Word Pair</h1>
+      <button id="newPuzzleBtn" title="Generate a new puzzle">New Puzzle</button>
+    </header>
+
+    <!-- Puzzle board -->
+    <section id="board">
+      <!-- Three 4-letter word boxes (2 slots each: front/back) -->
+      <div class="word-box" data-kind="4" aria-label="4-letter word #1">
+        <div class="slot" data-pos="front"></div>
+        <div class="slot" data-pos="back"></div>
+      </div>
+      <div class="word-box" data-kind="4" aria-label="4-letter word #2">
+        <div class="slot" data-pos="front"></div>
+        <div class="slot" data-pos="back"></div>
+      </div>
+      <div class="word-box" data-kind="4" aria-label="4-letter word #3">
+        <div class="slot" data-pos="front"></div>
+        <div class="slot" data-pos="back"></div>
+      </div>
+
+      <!-- One 6-letter word box (3 slots: front/center/back) -->
+      <div class="word-box six" data-kind="6" aria-label="6-letter word">
+        <div class="slot" data-pos="front"></div>
+        <div class="slot" data-pos="center"></div>
+        <div class="slot" data-pos="back"></div>
+      </div>
+    </section>
+
+    <!-- Tile rack -->
+    <section>
+      <h2 class="sr-only">Available letter pairs</h2>
+      <div id="rack" class="rack" aria-label="Letter pairs rack"></div>
+    </section>
+
+    <p id="status" aria-live="polite"></p>
+  </main>
+
+  <!-- Simple modal for the win message -->
+  <dialog id="winDialog">
+    <h3>🎉 You solved it!</h3>
+    <p id="solutionText"></p>
+    <form method="dialog">
+      <button>Close</button>
+    </form>
+  </dialog>
+
+  <script src="words.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
